@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Assignment</title>
+
+    <style>
+        .container {
+            width: 1200px;
+            margin: 10px auto;
+            background: rgba(0, 0, 0, 0) url("b.jpg") repeat scroll 0 0;
+        }
+        
+        .introduction {
+            color: #fff;
+            font-size: 49px;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        function evenodd() {
+            var x = document.getElementById("evenOdd").value;
+            var result = "";
+
+            if (x % 2 == 0) {
+                result = " is an even Number";
+            } else {
+                result = " is an odd Number";
+            }
+            document.getElementById("display").innerHTML = x + result;
+        }
+
+
+
+        function primeNumber() {
+            var y = document.getElementById("primeValue").value;
+            var result1 = "";
+            var count = 0;
+            var i;
+
+            for (i = 2; i < y; i++) {
+
+                if (y % i == 0) {
+                    count++
+                }
+
+            }
+
+            if (count > 0) {
+                result1 = y + " is not a Prime Number";
+            } else {
+                result1 = y + " is a Prime Number";
+            }
+
+            document.getElementById("displayPrime").innerHTML = result1;
+        }
+
+        function evenNumbers() {
+            var z = document.getElementById("range").value;
+            var result2;
+            var i;
+
+            for (i = 1; i <= z; i++) {
+
+                if (i % 2 == 0) {
+                    document.getElementById("numbers").innerHTML += i + "<br>";
+
+                }
+
+
+                //document.getElementById("displayNumbers").innerHTML = i;
+
+            }
+
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="introduction">
+
+            Name: RAHUL RAY
+            <br> Id : 1377; Group: CTG007
+
+        </div>
+        <!-- Answer : 1--->
+
+        <b>Solved: Write a program using JavaScript to check a number odd or even..</b>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+        <p>Please Enter a number ot check if the number is even or odd..</p>
+        <input type="number" id="evenOdd">
+        <br>
+        <button onclick="evenodd()">Check it</button>
+
+        <p id="display"></p>
+
+        </b>
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr>
+        </b>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+        <!-- Answer : 2--->
+        <b>Solved: Write a program using JavaScript to find out a number is prime or not.</b>
+        <br>
+        <br>
+        <br><b>
+		
+		<p>Please Enter a number ot check if the number is Prime or Not</p>
+
+
+		<input type="number" id="primeValue">
+		<br>
+		<button onclick="primeNumber()">Check it</button>
+
+		<p id="displayPrime"></p>
+		
+		
+		</b>
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr>
+        </b>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- Answer : 3--->
+        <b>Solved: Write a program using JavaScript to find out all of the even number in certain range.</b>
+        <br>
+        <br>
+        <br><b>
+		
+		<p>Please Enter a Range</p>
+		
+		<input type="number" id="range">
+		<br>
+		<button onclick="evenNumbers()">Check it</button>
+
+
+		<div id="numbers"></div>
+		
+	
+	</div>
+
+</body>
+</html>
